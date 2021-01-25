@@ -1,27 +1,45 @@
 import { Component } from '@angular/core';
+import { Product } from './Product';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root',  
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	// Create 3 variables
-	// Name - string, age - number, location (no type)
-  name : String = "Muzaffar"
-  age : Number = 30
-  location = "Equine Park"
-  num1 : Number = 10;
-  num2 = 3
-  // third data type
-  lapar = true
-  penat = false
-  // Array
-  scores = [30,25,10,20,60];
-  // Object
-  biodata = {"name":"Muzaffar","umur":30, 
-  "location":"Equine Park"}
+	name: String = "Nazila"
+    age: Number = 43
+    location = "Putrajaya"
+    // to bring this out in html 
+    num1: Number = 1
+    num2: Number = 4
+    lapar = true;
+    penat = false;
+    //array
+    score = [10,20,30];
+    //object
+    biodata = {"name":"nazila","age":10}
 
+    newProduct:Product = {
+      id:1,
+      name:"Huawei",
+      price:1000
+    }
 
-  // TO bring this out in HTML we use interpolation {{}}
+    myphones: Product[] = [{
+      id:1,
+      name:"Lenovo",
+      price:1200
+    },
+    {
+      id:2,
+      name:"Nokia",
+      price:3200
+    },
+    {
+      id:3,
+      name:"Samsung",
+      price:500
+    }
+    ]
 }

@@ -1,4 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
+
+<app-header></app-header>
 <div style="text-align:center">
   <h1>Hello World</h1>
   <h2>This is my first Angular website</h2>
@@ -6,8 +8,23 @@
   <p>{{num1}} + {{num2}} hasilnya adalah {{num1+num2}}</p>
   <p>{{num1}} / {{num2}} hasilnya adalah {{num1/num2}}</p>
   <p>The first item in the array is {{scores[0]}}</p>
-  <p>My biodata : {{biodata.name}}, {{biodata.umur}}, {{biodata.location}}</p>
+  <p>My biodata : {{biodata.name}}, {{biodata.umur}}, {{biodata.location}} <span *ngIf="biodata.umur < 35">[muda]</span></p>
   <p>{{lapar}} dan {{penat}} </p>
+
+<hr>
+<h2>Product</h2>
+<p>{{newProduct.name | uppercase }}</p>
+<p>{{newProduct.price | number:'1.2-2'}}</p>
+<p>{{newProduct.id}}</p>
+
+<hr>
+<h2>Product dari Array</h2>
+<ul>
+	<li *ngFor="let product of myphones">
+		{{product.id}} - {{product.name}} - {{product.price}} <span *ngIf="product.price < 1000">[promo]</span>
+	</li>
+</ul>
 
 
 <router-outlet></router-outlet>
+<app-footer></app-footer>
