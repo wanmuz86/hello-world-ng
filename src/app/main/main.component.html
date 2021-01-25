@@ -1,0 +1,28 @@
+<div style="text-align:center">
+  <h1>Hello World</h1>
+  <h2>This is my first Angular website</h2>
+  <h3>My name is {{name}}. I am {{age}} years old. I live in {{location}}</h3>
+  <p>{{num1}} + {{num2}} hasilnya adalah {{num1+num2}}</p>
+  <p>{{num1}} / {{num2}} hasilnya adalah {{num1/num2}}</p>
+  <p>The first item in the array is {{scores[0]}}</p>
+  <p>My biodata : {{biodata.name}}, {{biodata.umur}}, {{biodata.location}} <span *ngIf="biodata.umur < 35">[muda]</span></p>
+  <p>{{lapar}} dan {{penat}} </p>
+
+<hr>
+<h2>Product</h2>
+<p>{{newProduct.name | uppercase }}</p>
+<p>{{newProduct.price | number:'1.2-2'}}</p>
+<p>{{newProduct.id}}</p>
+
+<hr>
+<h2>Product dari Array</h2>
+<ul>
+	<li *ngFor="let product of myphones">
+		{{product.id}} - {{product.name}} - {{product.price}} <span *ngIf="product.price < 1000">[promo]</span>
+	</li>
+</ul>
+
+<hr>
+<h2>My Form</h2>
+<input type="text" name="myname" placeholder="Enter your name" [(ngModel)]="nameInput">
+<button (click)="buttonPressed()">Click Me!</button>
